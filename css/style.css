@@ -1,3 +1,21 @@
+.logo-container {
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.logo {
+    height: auto;        /* Adjust this number until it looks right – start with 80–100px */
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 70px;    /* Slightly smaller on mobile */
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
