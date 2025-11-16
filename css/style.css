@@ -25,7 +25,7 @@ body {
 }
 
 header {
-    background-color: #2c3e50;
+    background-color: #003299;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -103,11 +103,145 @@ main {
 }
 
 footer {
-    background-color: #2c3e50;
+    background-color: #003299;
     color: white;
     text-align: center;
     padding: 1rem;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Force original styling even with Bootstrap loaded */
+body { font-family: Arial, sans-serif !important; color: #333 !important; line-height: 1.6 !important; }
+h1, h2, h3, h4, h5, h6 { color: #333 !important; }
+a { color: #333; }
+a:hover { color: #e74c3c; }
+
+/* Keep your exact red button */
+.cta-button { background-color: #e74c3c !important; }
+.cta-button:hover { background-color: #c0392b !important; }
+
+/* Make dropdown match your dark header */
+.dropdown-menu { background-color: #2c3e50; }
+.dropdown-item { color: white !important; }
+.dropdown-item:hover, .dropdown-item:focus { background-color: #e74c3c !important; color: white !important; }
+
+/* New blue header */
+.navbar-blue {
+    background-color: #003299 !important;
+}
+
+/* Logo size – adjust the 90px if your logo is bigger/smaller */
+.logo {
+    height: 90px;
+    width: auto;
+}
+
+/* White menu text + underline on hover like your original site */
+.navbar-blue .nav-link {
+    color: white !important;
+    font-weight: 500;
+    position: relative;
+}
+.navbar-blue .nav-link:hover,
+.navbar-blue .nav-link.active {
+    color: white !important;
+}
+.navbar-blue .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+.navbar-blue .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Light dropdown (white background like most sites) */
+.dropdown-menu {
+    background-color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.dropdown-item {
+    color: #003299 !important;
+}
+.dropdown-item:hover {
+    background-color: #f0f5ff;
+    color: #003299 !important;
+}
+
+/* Blue header background */
+.navbar-blue {
+    background-color: #003299 !important;
+}
+
+/* Centered logo on desktop, left on mobile */
+@media (min-width: 992px) {
+    .navbar-blue {
+        position: relative;
+        padding-top: 160px !important;    /* ← increased a lot – pushes menu way down */
+        padding-bottom: 30px;
+    }
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        top: 20px;                        /* pulls logo up a little so it sits nicely at the top */
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+}
+
+/* Logo sizes – adjust if your logo is taller/shorter */
+.logo {
+    height: 120px;      /* desktop size */
+    width: auto;
+}
+@media (max-width: 991px) {
+    .logo {
+        height: 80px;    /* smaller on phones */
+    }
+}
+
+/* White text + underline hover effect (exactly like your original site) */
+.navbar-blue .nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+.navbar-blue .nav-link:hover,
+.navbar-blue .nav-link.active {
+    color: white !important;
+}
+.navbar-blue .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+.navbar-blue .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Dropdown style – dark blue like original */
+.dropdown-menu {
+    background-color: #003299;
+    border: none;
+}
+.dropdown-item {
+    color: white !important;
+}
+.dropdown-item:hover {
+    background-color: #002266;
+    color: white !important;
 }
